@@ -1,6 +1,6 @@
 # PostCSS Remove At Rules [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin to remove rules by selector.
+[PostCSS] plugin to remove at rules by name.
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/erykpiast/postcss-remove-at-rules.svg
