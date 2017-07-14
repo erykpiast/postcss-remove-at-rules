@@ -16,13 +16,14 @@
     "url": "https://github.com/erykpiast/postcss-remove-at-rules/issues"
   },
   "homepage": "https://github.com/erykpiast/postcss-remove-at-rules",
-  "dependencies": {
-    "postcss": "^5.0.21"
+  "peerDependencies": {
+    "postcss": ">=5.0"
   },
   "devDependencies": {
     "ava": "^0.21.0",
     "eslint": "^3.19.0",
-    "eslint-config-postcss": "^2.0.2"
+    "eslint-config-postcss": "^2.0.2",
+    "postcss": "^5.0.21"
   },
   "scripts": {
     "test": "npm run lint && ava",
