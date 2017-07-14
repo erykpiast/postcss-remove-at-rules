@@ -1,7 +1,7 @@
 {
-  "name": "postcss-remove-rules",
+  "name": "postcss-remove-at-rules",
   "version": "1.0.0",
-  "description": "PostCSS plugin to remove rules by selector.",
+  "description": "PostCSS plugin to remove at rules by name.",
   "keywords": [
     "postcss",
     "css",
@@ -9,23 +9,29 @@
     "remove",
     "filter"
   ],
-  "author": "Chris Hinrichs <chinrichs@godaddy.com>",
+  "author": "Eryk Napierała <eryk.piast@gmail.com>",
   "license": "MIT",
-  "repository": "chrishinrichs/postcss-remove-rules",
+  "repository": "erykpiast/postcss-remove-at-rules",
   "bugs": {
-    "url": "https://github.com/chrishinrichs/postcss-remove-rules/issues"
+    "url": "https://github.com/erykpiast/postcss-remove-at-rules/issues"
   },
-  "homepage": "https://github.com/chrishinrichs/postcss-remove-rules",
+  "homepage": "https://github.com/erykpiast/postcss-remove-at-rules",
   "dependencies": {
     "postcss": "^5.0.21"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
-    "eslint": "^2.10.0",
+    "ava": "^0.21.0",
+    "eslint": "^3.19.0",
     "eslint-config-postcss": "^2.0.2"
   },
   "scripts": {
-    "test": "ava && eslint *.js"
+    "test": "npm run lint && ava",
+    "lint": "eslint *.js",
+    "prepublish": "git checkout master",
+    "postpublish": "git push origin master --tags",
+    "release:patch": "npm version patch && npm publish --access=public",
+    "release:minor": "npm version minor && npm publish --access=public",
+    "release:major": "npm version major && npm publish --access=public"
   },
   "eslintConfig": {
     "extends": "eslint-config-postcss/es5"
