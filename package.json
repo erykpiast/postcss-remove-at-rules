@@ -1,6 +1,6 @@
 {
   "name": "postcss-remove-at-rules",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PostCSS plugin to remove at rules by name.",
   "keywords": [
     "postcss",
