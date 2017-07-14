@@ -28,7 +28,7 @@
   "scripts": {
     "test": "npm run lint && ava",
     "lint": "eslint *.js",
-    "prepublish": "git checkout master && npm run commit-lock",
+    "prepublish": "git checkout master && npm run commit-lock; exit 0",
     "postpublish": "git push origin master --tags",
     "commit-lock": "git add package-lock.json && git commit --fixup=HEAD && GIT_EDITOR=true git rebase -i --autosquash HEAD~2",
     "release:patch": "npm version patch && npm publish --access=public",
